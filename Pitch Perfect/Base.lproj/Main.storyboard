@@ -24,35 +24,53 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GlK-BW-NPW"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da0-5f-oqS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wm-pB-0zq"/>
+                            <constraint firstItem="da0-5f-oqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PeB-wM-Xdt"/>
+                            <constraint firstItem="da0-5f-oqS" firstAttribute="top" secondItem="FVL-Dm-gOH" secondAttribute="bottom" constant="17" id="UDO-SL-pzp"/>
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pJV-Is-9IY"/>
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r92-MR-86v"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FVL-Dm-gOH"/>
+                                <exclude reference="da0-5f-oqS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2wm-pB-0zq"/>
                                 <exclude reference="pJV-Is-9IY"/>
                                 <exclude reference="r92-MR-86v"/>
+                                <exclude reference="PeB-wM-Xdt"/>
+                                <exclude reference="UDO-SL-pzp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FVL-Dm-gOH"/>
+                                <include reference="da0-5f-oqS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2wm-pB-0zq"/>
                                 <include reference="pJV-Is-9IY"/>
                                 <include reference="r92-MR-86v"/>
+                                <include reference="PeB-wM-Xdt"/>
+                                <include reference="UDO-SL-pzp"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="da0-5f-oqS" id="ELC-6l-KeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
