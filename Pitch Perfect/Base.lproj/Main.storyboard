@@ -31,6 +31,17 @@
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-yV-OBI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stopButton"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="175" y="524" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI7-PI-2le"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -38,13 +49,16 @@
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wm-pB-0zq"/>
                             <constraint firstItem="da0-5f-oqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PeB-wM-Xdt"/>
                             <constraint firstItem="da0-5f-oqS" firstAttribute="top" secondItem="FVL-Dm-gOH" secondAttribute="bottom" constant="17" id="UDO-SL-pzp"/>
+                            <constraint firstItem="Ink-yV-OBI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hwU-xe-grv"/>
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pJV-Is-9IY"/>
                             <constraint firstItem="FVL-Dm-gOH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r92-MR-86v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ink-yV-OBI" secondAttribute="bottom" constant="36" id="rYL-3U-hb8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FVL-Dm-gOH"/>
                                 <exclude reference="da0-5f-oqS"/>
+                                <exclude reference="Ink-yV-OBI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2wm-pB-0zq"/>
@@ -52,12 +66,15 @@
                                 <exclude reference="r92-MR-86v"/>
                                 <exclude reference="PeB-wM-Xdt"/>
                                 <exclude reference="UDO-SL-pzp"/>
+                                <exclude reference="hwU-xe-grv"/>
+                                <exclude reference="rYL-3U-hb8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FVL-Dm-gOH"/>
                                 <include reference="da0-5f-oqS"/>
+                                <include reference="Ink-yV-OBI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2wm-pB-0zq"/>
@@ -65,6 +82,8 @@
                                 <include reference="r92-MR-86v"/>
                                 <include reference="PeB-wM-Xdt"/>
                                 <include reference="UDO-SL-pzp"/>
+                                <include reference="hwU-xe-grv"/>
+                                <include reference="rYL-3U-hb8"/>
                             </mask>
                         </variation>
                     </view>
@@ -78,5 +97,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>
